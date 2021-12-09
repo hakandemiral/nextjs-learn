@@ -1,10 +1,11 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router';
 import Layout from '@/components/layout';
 import { getAllPostIds, getPostData } from '@/lib/posts'
 import Date from '@/components/date'
 import utilStyles from '@/styles/utils.module.css'
 
-export default ({ postData }) => {
+const BlogPost = ({ postData }) => {
   return(
     <Layout>
       <Head>
@@ -38,3 +39,5 @@ export const getStaticProps = async ({ params }) => {
     }
   }
 }
+
+export default BlogPost;
